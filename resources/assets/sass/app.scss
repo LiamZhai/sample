@@ -20,6 +20,10 @@ textarea {
   text-align: center;
 }
 
+.alert-status {
+  @extend .alert-info;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -148,6 +152,7 @@ section.user_info {
     margin-top: 15px;
   }
 }
+
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -171,7 +176,6 @@ input {
   margin-top: 50px;
 }
 
-
 /* Users edit */
 
 .gravatar_edit {
@@ -181,7 +185,6 @@ input {
     float: none;
     max-width: 100px;
   }
-
 }
 
 /* Users index */
@@ -202,3 +205,6 @@ input {
   position: relative;
   right: 0;
 }
+
+
+
