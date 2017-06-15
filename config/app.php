@@ -195,5 +195,5 @@ return [
 
     ],
 
-    'locale' => 'zh-CN',
+  #  'locale' => 'zh-CN',
 ];

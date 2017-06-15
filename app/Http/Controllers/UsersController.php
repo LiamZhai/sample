@@ -19,7 +19,7 @@ class UsersController extends Controller
    public function __construct()
     {
         $this->middleware('auth', [
-            'only' => ['edit', 'update', 'destroy']
+            'only' => ['edit', 'update', 'destroy','followings', 'followers']
         ]); 
         $this->middleware('guest', [
             'only' => ['create']
@@ -30,7 +30,7 @@ class UsersController extends Controller
     public function index()
     {
       // $users = User::all();
-        $users = User::paginate(30);
+        $users = User::paginate(10);
         return view('users.index', compact('users'));
     } 
 
@@ -44,7 +44,7 @@ class UsersController extends Controller
         $user = User::findOrFail($id);
         $statuses = $user->statuses()
                            ->orderBy('created_at','desc')
-                              ->paginate(30);
+                              ->paginate(10);
         return view('users.show',compact('user','statuses'));
     }
 
@@ -64,7 +64,7 @@ class UsersController extends Controller
         ]);
 
         $this->sendEmailConfirmationTo($user);
-        session()->flash('success', '验证邮件已发送到你的注册邮箱上，请注意查收。');
+        session()->flash('success', 'Verficiation email has been sent to you, please check it!');
         return redirect('/');
     }
  
@@ -91,7 +91,7 @@ class UsersController extends Controller
         }
         $user->update($data);
 
-        session()->flash('success', '个人资料更新成功！');
+        session()->flash('success', 'You are updated yourself!');
 
         return redirect()->route('users.show', $id);
     }
@@ -101,7 +101,7 @@ class UsersController extends Controller
         $user = User::findOrFail($id);
         $this->authorize('destroy', $user);
         $user->delete();
-        session()->flash('success', '成功删除用户！');
+        session()->flash('success', 'User has been deleted!');
         return back();
     }
  
@@ -112,7 +112,7 @@ class UsersController extends Controller
         $from = 'liamzhai@163.com';
         $name = 'Liam';
         $to = $user->email;
-        $subject = "感谢注册 Sample 应用！请确认你的邮箱。";
+        $subject = "Thanks for you signup, confirm your email!";
 
         Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
             $message->from($from, $name)->to($to)->subject($subject);
@@ -128,8 +128,24 @@ class UsersController extends Controller
         $user->save();
 
         Auth::login($user);
-        session()->flash('success', '恭喜你，激活成功！');
+        session()->flash('success', 'Congratulations,your account is activated!');
         return redirect()->route('users.show', [$user]);
+    }
+
+     public function followings($id)
+    {
+        $user = User::findOrFail($id);
+        $users = $user->followings()->paginate(10);
+        $title = 'Followings:';
+        return view('users.show_follow', compact('users', 'title'));
+    }
+
+    public function followers($id)
+    {
+        $user = User::findOrFail($id);
+        $users = $user->followers()->paginate(10);
+        $title = 'Followers:';
+        return view('users.show_follow', compact('users', 'title'));
     }
 }
 

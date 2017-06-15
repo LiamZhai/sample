@@ -1,12 +1,14 @@
 <div class="col-md-12">
   <footer class="footer">
     <small class="slogon">
-      <li>Learning Laravel by your heart.</li>
+      <li>Happy Coding</li>
     </small>
     <nav>
       <ul>
-        <li><a href="{{ route('about') }}">关于</a></li>
+        <li><a href="mailto:liamzhai@gmail.com">@Me</a></li>
+        <li><a href="{{ route('about') }}">About</a></li>
       </ul>
     </nav>
+
   </footer>
 </div>

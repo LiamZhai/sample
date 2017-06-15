@@ -1,11 +1,11 @@
 @extends('layouts.default')
-@section('title', '更新个人资料')
+@section('title', 'Update')
 
 @section('content')
 <div class="col-md-offset-2 col-md-8">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h5>更新个人资料</h5>
+      <h5>EDIT</h5>
     </div>
       <div class="panel-body">
 
@@ -22,25 +22,25 @@
             {{ csrf_field() }}
 
             <div class="form-group">
-              <label for="name">名称：</label>
+              <label for="name">Name:</label>
               <input type="text" name="name" class="form-control" value="{{ $user->name }}">
             </div>
 　　　　　　　<div class="form-group">
-              <label for="email">邮箱：</label>
+              <label for="email">Email Address:</label>
               <input type="text" name="email" class="form-control" value="{{ $user->email }}" disabled>
             </div>
 
             <div class="form-group">
-              <label for="password">密码：</label>
+              <label for="password">Password:</label>
               <input type="password" name="password" class="form-control" value="{{ old('password') }}">
             </div>
 
             <div class="form-group">
-              <label for="password_confirmation">确认密码：</label>
+              <label for="password_confirmation">Confirm Password:</label>
               <input type="password" name="password_confirmation" class="form-control" value="{{ old('password_confirmation') }}">
             </div>
 
-            <button type="submit" class="btn btn-primary">更新</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
   </div>

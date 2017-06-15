@@ -1,4 +1,4 @@
-<p>点击下面链接重置密码：</p>
+<p>Click the linke below to reset your password:</p>
 
 <a href="{{ route('password.update') . '/' . $token }}">
   {{ route('password.update') . '/' . $token }}

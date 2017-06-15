@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>@yield('title', 'Sample App') - Laravel 入门教程</title>
+    <title>@yield('title', 'Kyxx') | Saya</title>
     <link rel="stylesheet" href="/css/app.css">
+   <link rel="shortcut icon" href="favicon.ico">
   </head>
   <body>
     @include('layouts._header')
@@ -17,4 +18,3 @@
     <script src="/js/app.js"></script>
   </body>
 </html>
-
