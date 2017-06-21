@@ -1,11 +1,11 @@
 @extends('layouts.default')
-@section('title', 'Update')
+@section('title', 'Settings')
 
 @section('content')
 <div class="col-md-offset-2 col-md-8">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h5>EDIT</h5>
+      <h5>Settings</h5>
     </div>
       <div class="panel-body">
 
@@ -26,7 +26,7 @@
               <input type="text" name="name" class="form-control" value="{{ $user->name }}">
             </div>
 　　　　　　　<div class="form-group">
-              <label for="email">Email Address:</label>
+              <label for="email">Email:</label>
               <input type="text" name="email" class="form-control" value="{{ $user->email }}" disabled>
             </div>
 
@@ -40,7 +40,7 @@
               <input type="password" name="password_confirmation" class="form-control" value="{{ old('password_confirmation') }}">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Done</button>
         </form>
     </div>
   </div>

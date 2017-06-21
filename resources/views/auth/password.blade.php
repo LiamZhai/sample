@@ -12,10 +12,10 @@
           <form method="POST" action="{{ route('password.reset') }}">
             {{ csrf_field() }}
           <p class="col-md-10">
-               Enter your email address below and we'll send you a link.
+               Enter your email below and we'll send you a link to activate it.
           </p>
             <div class="form-group">
-              <label class="col-md-4 control-label">Email Address:</label>
+              <label class="col-md-4 control-label">Email:</label>
               <div class="col-md-6">
                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
               </div>

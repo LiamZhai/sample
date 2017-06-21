@@ -5953,4 +5953,28 @@ aside textarea {
 .status_form {
   margin-top: 20px; }
 
+.markdown-body {
+  font-size: 16px; }
+  .markdown-body h2 {
+    padding-bottom: 0.3em;
+    font-family: initial;
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: bolder;
+    border-bottom: 1px solid #a94442;
+    margin-bottom: 5px; }
+  .markdown-body a {
+    color: #0366d6;
+    text-decoration: none; }
+
+#laravel {
+  margin-left: 300px; }
+
+#kangyun {
+  margin-left: 400px; }
+
+#paragraph {
+  font-size: 16px;
+  line-height: 1.5; }
+
 /*# sourceMappingURL=app.css.map */

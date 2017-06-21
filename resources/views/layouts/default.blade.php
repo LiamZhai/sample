@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>@yield('title', 'Kyxx') | Saya</title>
+    <title>@yield('title', 'Kyit') | Saya</title>
     <link rel="stylesheet" href="/css/app.css">
    <link rel="shortcut icon" href="favicon.ico">
   </head>

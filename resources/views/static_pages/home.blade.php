@@ -23,13 +23,13 @@
     <div class="jumbotron">
       <h1>Hello Friend</h1>
       <p class="lead">
-        Welcome to Kyxx, say something interesting here.
+        Welcome to Kyit, there is a new social named 'Saya'.
       </p>
       <p>
-        It's a new world!
+        Enjoy yourself here!
       </p>
       <p>
-        <a class="btn btn-lg btn-success" href="{{ route('signup') }}" role="button">Sign Up</a>
+        New? <a class="btn btn-lg btn-success" href="{{ route('signup') }}" role="button">Sign Up</a>
       </p>
     </div>
   @endif
