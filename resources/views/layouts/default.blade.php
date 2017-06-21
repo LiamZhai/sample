@@ -3,7 +3,7 @@
   <head>
     <title>@yield('title', 'Kyit') | Saya</title>
     <link rel="stylesheet" href="/css/app.css">
-   <link rel="shortcut icon" href="favicon.ico">
+   <link rel="shortcut icon" href="{{{ asset('favicon.ico') }}}">
   </head>
   <body>
     @include('layouts._header')
