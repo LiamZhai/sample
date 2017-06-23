@@ -32,4 +32,13 @@ class StaticPagesController extends Controller
     {
         return view('static_pages/about');
     }
+
+    public function layout_login2()
+    {
+        return view('static_pages/layout_login2');
+    
+    }
+
+
+
 }

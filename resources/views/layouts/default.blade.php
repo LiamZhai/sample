@@ -4,6 +4,7 @@
     <title>@yield('title', 'Kyit') | Saya</title>
     <link rel="stylesheet" href="/css/app.css">
    <link rel="shortcut icon" href="{{{ asset('favicon.ico') }}}">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
   </head>
   <body>
     @include('layouts._header')

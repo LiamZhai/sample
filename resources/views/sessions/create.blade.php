@@ -15,14 +15,25 @@
 
         <div class="form-group">
           <label for="email">Email:</label>
+           <div class="input-group">
+            <div class="input-group-addon">
+             <span class="glyphicon glyphicon-envelope"></span>
+          </div>
+
           <input type="text" name="email" class="form-control" value="{{ old('email') }}">
+        </div>
         </div>
 
         <div class="form-group">
           <label for="password">Password(<a href="{{ route('password.reset') }}">Forgot password?</a>):</label>
+           <div class="input-group">
+   <div class="input-group-addon">
+        <span class="glyphicon glyphicon-lock"></span>
+   </div>
+
           <input type="password" name="password" class="form-control" value="{{ old('password') }}">
         </div>
-
+        </div>
         <div class="checkbox">
           <label><input type="checkbox" name="remember"> Remember me</label>
         </div>

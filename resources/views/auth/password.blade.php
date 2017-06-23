@@ -14,13 +14,18 @@
           <p class="col-md-10">
                Enter your email below and we'll send you a link to activate it.
           </p>
-            <div class="form-group">
+            
+            <div class="form-group col-md-10">
               <label class="col-md-4 control-label">Email:</label>
-              <div class="col-md-6">
+
+              <div class="input-group">
+            <div class="input-group-addon">
+             <span class="glyphicon glyphicon-envelope"></span>
+          </div>
+
                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
               </div>
             </div>
-
             <div class="form-group">
               <div class="col-md-6 col-md-offset-4">
                 <button type="submit" class="btn btn-primary">

@@ -28,6 +28,7 @@
           @else
             <li><a href="{{ route('help') }}">Help</a></li>
             <li><a href="{{ route('login') }}">Sign in</a></li>
+            <li><a href="{{ route('layout_login2') }}">Login2</a></li>
           @endif
         </ul>
       </nav>
