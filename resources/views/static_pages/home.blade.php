@@ -21,12 +21,10 @@
     </div>
   @else
     <div class="jumbotron">
-      <h1>Hello Friend</h1>
-      <p class="lead">
-        Welcome to Kyit, there is a new social named 'Saya'.
-      </p>
+      <h1>What's happening?</h1>
+      
       <p>
-        Enjoy yourself here!
+       <h3> Welcome to Saya. </h3>
       </p>
       <p>
         New? <a class="btn btn-lg btn-success" href="{{ route('signup') }}" role="button">Sign Up</a>
